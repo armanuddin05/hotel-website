@@ -1,0 +1,242 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    position: fixed; /* Makes the navbar stay at the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align it to the left of the viewport */
+    width: 100%; /* Ensure it spans the full width of the viewport */
+    height: 13%;
+    z-index: 1000; /* Ensures the navbar stays on top of other content */
+}
+header img {
+    margin-left: -70%;
+    margin-top: -.4%;
+}
+
+nav {
+    margin-right: -53%;
+    margin-top: -4%;
+}
+
+nav a {
+    color: black;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: rgb(107, 107, 226);
+    transition: .5s;
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('https://cf.bstatic.com/xdata/images/hotel/max1024x768/216480461.jpg?k=357426f1549584b5019bb75ca59aa792132e2cc4859e0f9e876ce54e42cb0dbc&o=&hp=1'); /* Replace with your own image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 3em;
+}
+
+.overlay p {
+    font-size: 1.2em;
+}
+
+.overlay .btn {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.overlay .btn:hover {
+    background-color: #ff4747;
+}
+
+/* Room Grid */
+#rooms {
+    padding: 50px;
+}
+
+.room-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.room {
+    max-width: 300px;
+    margin: 20px;
+}
+
+.room img {
+    width: 100%;
+}
+
+#services {
+    margin-left: 3%;
+    padding: 0px;
+}
+
+.services-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    max-width: 300px;
+    margin: 20px;
+}
+
+/* Gallery */
+#gallery {
+    padding: 50px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gallery-grid img {
+    width: 100%;
+}
+
+/* Booking Form */
+#booking {
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+#booking form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#booking form label {
+    margin: 10px 0 5px;
+}
+
+#booking form input,
+#booking form button {
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Footer */
+#contact {
+    background-color: #333;
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .room-grid, .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-list {
+        flex-direction: column;
+    }
+}
+
+.room-btn {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.room-btn:hover {
+    background-color: #ff4747;
+}
+
+
+/* Gallery Slider */
+.gallery-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 300%; /* If you have 3 images, multiply by 100 for each */
+}
+
+.slide {
+    min-width: 100%;
+    height: auto;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+
